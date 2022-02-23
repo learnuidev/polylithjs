@@ -1,7 +1,7 @@
 // import core from './core';
 const core = require('./core')
 
-const browseArticles = () => core.browseArticles();
+const browseArticles = async () => await core.browseArticles();
 
 exports.browseArticles = browseArticles;
 

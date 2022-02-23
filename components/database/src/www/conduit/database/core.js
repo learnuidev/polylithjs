@@ -1,17 +1,20 @@
 const postgres = require('postgres');
 
+const dropTable = async (sql, { name }) => {
+    await sql`DROP table ${name}`
+}
+
 const db = (config) => {
     const sql = postgres(`postgres://username@host:port/database`, {
         username: 'vishalgautam',
-        host: 'locahost',
+        host: 'localhost',
         port: 5432,
         database: 'conduit_dev'
     })
 
-    console.log("SQL", sql);
-    return sql
-    // return postgres(config)
+    return sql;
 }
 
 
 exports.db = db;
+exports.dropTable = dropTable;

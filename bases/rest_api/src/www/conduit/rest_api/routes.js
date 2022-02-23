@@ -6,7 +6,10 @@ const routes = ({ app }) => {
         res.send('hello world')
     })
 
-    app.get('/articles', handlers.browseArticles)
+    app.get('/api/articles', handlers.browseArticles)
+
+    app.post('/api/register', handlers.registerUser)
+    app.post('/api/login', handlers.loginUser)
 }
 
 exports.routes = routes;

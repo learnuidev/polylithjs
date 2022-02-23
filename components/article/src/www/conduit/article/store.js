@@ -1,9 +1,18 @@
 const database = require('../../../../../database/src/www/conduit/database/interface');
 
 
-const db = database.db()
+// caching in order t
+let db;
 
 const browseArticles = async () => {
+    if (!db) {
+        console.log("GETS CALLED")
+        db = database.db()
+    }
+
+    console.log("GETS CALLED")
+
+
     // console.log("DB", db);
     return await db`select * from mySchema.users`
     // return [

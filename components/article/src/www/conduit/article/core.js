@@ -1,15 +1,7 @@
-const browseArticles = () => {
-    return [
+const articleStore = require('./store')
 
-        {
-            id: 'article-1',
-            title: "Learning Polylith"
-        },
-        {
-            id: 'article-2',
-            title: "Learning Polylith Architecture"
-        }
-    ]
+const browseArticles = () => {
+    return articleStore.browseArticles();
 }
 
 exports.browseArticles = browseArticles

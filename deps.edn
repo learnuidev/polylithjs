@@ -1,8 +1,12 @@
 {:aliases  {:dev {:extra-paths ["development/src"]
                   :extra-deps {org.clojure/clojure {:mvn/version "1.10.3"}
-                               org.clojure/tools.deps.alpha {:mvn/version "0.12.1003"}}}
+                               org.clojure/tools.deps.alpha {:mvn/version "0.12.1003"}
+                               seancorfield/next.jdbc {:mvn/version "1.1.582"}
+                               org.postgresql/postgresql {:mvn/version "42.2.14"}
+                               com.zaxxer/HikariCP {:mvn/version "3.4.5"}}}
 
             :test {:extra-paths []}
+            :repl {:jvm-opts ["-Dclojure.server.repl={:port 7777 :accept clojure.core.server/repl}"]}
 
             :poly {:main-opts ["-m" "polylith.clj.core.poly-cli.core"]
                    :extra-deps {polyfy/polylith

@@ -1,3 +1,5 @@
-import core from './core'
+const core = require('./core');
 
-export const db = (config) => core.db(config)
+const db = (config) => core.db(config)
+
+exports.db = db;

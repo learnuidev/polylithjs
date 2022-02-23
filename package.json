@@ -5,6 +5,13 @@
   "author": "learnuidev <learnuidev@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "postgres": "^1.0.2"
+  },
+  "scripts": {
+    "dev": "node_modules/nodemon/bin/nodemon.js index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

@@ -1,0 +1,193 @@
+{:bases [{:interface-deps {:src [], :test []},
+          :lib-deps {},
+          :lib-imports {:test ["clojure.test" "www.conduit.rest_api.core"]},
+          :lines-of-code {:src 1, :test 6},
+          :name "rest_api",
+          :namespaces {:src [{:file-path "/Users/vishalgautam/projects/polylith_js/conduit/bases/rest_api/src/www/conduit/rest_api/core.clj",
+                              :imports [],
+                              :name "core",
+                              :namespace "www.conduit.rest_api.core"}],
+                       :test [{:file-path "/Users/vishalgautam/projects/polylith_js/conduit/bases/rest_api/test/www/conduit/rest_api/core_test.clj",
+                               :imports ["clojure.test"
+                                         "www.conduit.rest_api.core"],
+                               :name "core-test",
+                               :namespace "www.conduit.rest_api.core-test"}]},
+          :paths {:src ["src" "resources"], :test ["test"]},
+          :type "base"}],
+ :changes {:changed-bases ["rest_api"],
+           :changed-components ["article" "database"],
+           :changed-files [".gitignore"
+                           "bases/rest_api/deps.edn"
+                           "bases/rest_api/resources/rest_api/.keep"
+                           "bases/rest_api/src/www/conduit/rest_api/core.clj"
+                           "bases/rest_api/src/www/conduit/rest_api/handlers.js"
+                           "bases/rest_api/src/www/conduit/rest_api/index.js"
+                           "bases/rest_api/src/www/conduit/rest_api/middlewares.js"
+                           "bases/rest_api/src/www/conduit/rest_api/routes.js"
+                           "bases/rest_api/test/www/conduit/rest_api/core_test.clj"
+                           "components/article/deps.edn"
+                           "components/article/resources/article/.keep"
+                           "components/article/src/www/conduit/article/core.js"
+                           "components/article/src/www/conduit/article/interface.clj"
+                           "components/article/src/www/conduit/article/interface.js"
+                           "components/article/test/www/conduit/article/interface_test.clj"
+                           "components/database/deps.edn"
+                           "components/database/resources/database/.keep"
+                           "components/database/src/www/conduit/database/core.js"
+                           "components/database/src/www/conduit/database/interface.clj"
+                           "components/database/src/www/conduit/database/interface.js"
+                           "components/database/test/www/conduit/database/interface_test.clj"
+                           "index.js"
+                           "package.json"
+                           "repl.js"
+                           "yarn.lock"],
+           :changed-or-affected-projects [],
+           :changed-projects [],
+           :git-diff-command "git diff 5599006cad448a1d60c17ee673d82ae19370b854 --name-only",
+           :project-to-bricks-to-test {"development" []},
+           :project-to-indirect-changes {"development" {:src [], :test []}},
+           :project-to-projects-to-test {"development" []},
+           :since "stable",
+           :since-sha "5599006cad448a1d60c17ee673d82ae19370b854"},
+ :components [{:interface {:definitions [], :name "article"},
+               :interface-deps {:src [], :test []},
+               :lib-deps {},
+               :lib-imports {:test ["clojure.test"]},
+               :lines-of-code {:src 1, :test 6},
+               :name "article",
+               :namespaces {:src [{:file-path "/Users/vishalgautam/projects/polylith_js/conduit/components/article/src/www/conduit/article/interface.clj",
+                                   :imports [],
+                                   :name "interface",
+                                   :namespace "www.conduit.article.interface"}],
+                            :test [{:file-path "/Users/vishalgautam/projects/polylith_js/conduit/components/article/test/www/conduit/article/interface_test.clj",
+                                    :imports ["clojure.test"
+                                              "www.conduit.article.interface"],
+                                    :name "interface-test",
+                                    :namespace "www.conduit.article.interface-test"}]},
+               :paths {:src ["src" "resources"], :test ["test"]},
+               :type "component"}
+              {:interface {:definitions [], :name "database"},
+               :interface-deps {:src [], :test []},
+               :lib-deps {},
+               :lib-imports {:test ["clojure.test"]},
+               :lines-of-code {:src 1, :test 6},
+               :name "database",
+               :namespaces {:src [{:file-path "/Users/vishalgautam/projects/polylith_js/conduit/components/database/src/www/conduit/database/interface.clj",
+                                   :imports [],
+                                   :name "interface",
+                                   :namespace "www.conduit.database.interface"}],
+                            :test [{:file-path "/Users/vishalgautam/projects/polylith_js/conduit/components/database/test/www/conduit/database/interface_test.clj",
+                                    :imports ["clojure.test"
+                                              "www.conduit.database.interface"],
+                                    :name "interface-test",
+                                    :namespace "www.conduit.database.interface-test"}]},
+               :paths {:src ["src" "resources"], :test ["test"]},
+               :type "component"}],
+ :interfaces [{:definitions [],
+               :implementing-components ["article"],
+               :name "article",
+               :type "interface"}
+              {:definitions [],
+               :implementing-components ["database"],
+               :name "database",
+               :type "interface"}],
+ :messages [],
+ :name "conduit",
+ :paths {:existing ["development/src"],
+         :missing [],
+         :on-disk ["bases/rest_api/resources"
+                   "bases/rest_api/src"
+                   "bases/rest_api/test"
+                   "components/article/resources"
+                   "components/article/src"
+                   "components/article/test"
+                   "components/database/resources"
+                   "components/database/src"
+                   "components/database/test"]},
+ :projects [{:alias "dev",
+             :base-names {},
+             :component-names {},
+             :config-filename "/Users/vishalgautam/projects/polylith_js/conduit/deps.edn",
+             :deps {},
+             :is-dev true,
+             :is-run-tests false,
+             :lib-deps {:src {"org.clojure/clojure" {:size 3914649,
+                                                     :type "maven",
+                                                     :version "1.10.3"},
+                              "org.clojure/tools.deps.alpha" {:size 60953,
+                                                              :type "maven",
+                                                              :version "0.12.1003"}}},
+             :lib-imports {},
+             :lines-of-code {:src 0, :test 0, :total {:src 0, :test 0}},
+             :maven-repos {"central" {:url "https://repo1.maven.org/maven2/"},
+                           "clojars" {:url "https://repo.clojars.org/"}},
+             :name "development",
+             :namespaces {},
+             :paths {:src ["development/src"]},
+             :project-dir "/Users/vishalgautam/projects/polylith_js/conduit/development",
+             :type "project",
+             :unmerged {:lib-deps {:src {"org.clojure/clojure" {:size 3914649,
+                                                                :type "maven",
+                                                                :version "1.10.3"},
+                                         "org.clojure/tools.deps.alpha" {:size 60953,
+                                                                         :type "maven",
+                                                                         :version "0.12.1003"}}},
+                        :paths {:src ["development/src"]}}}],
+ :settings {:active-profiles #{},
+            :color-mode "dark",
+            :compact-views #{},
+            :default-profile-name "default",
+            :empty-character ".",
+            :interface-ns "interface",
+            :m2-dir "/Users/vishalgautam/.m2",
+            :profile-to-settings {},
+            :projects {"development" {:alias "dev"}},
+            :tag-patterns {:release "v[0-9]*", :stable "stable-*"},
+            :thousand-separator ",",
+            :top-namespace "www.conduit",
+            :user-config-filename "/Users/vishalgautam/.polylith/config.edn",
+            :user-home "/Users/vishalgautam",
+            :vcs {:auto-add false,
+                  :branch "main",
+                  :git-root "/Users/vishalgautam/projects/polylith_js/conduit",
+                  :name "git",
+                  :polylith {:branch "master",
+                             :repo "https://github.com/polyfy/polylith.git"},
+                  :stable-since {:sha "5599006cad448a1d60c17ee673d82ae19370b854"}}},
+ :user-input {:args ["ws"],
+              :cmd "ws",
+              :is-all false,
+              :is-compact false,
+              :is-dev false,
+              :is-latest-sha false,
+              :is-no-changes false,
+              :is-no-exit false,
+              :is-run-all-brick-tests false,
+              :is-run-project-tests false,
+              :is-search-for-ws-dir false,
+              :is-shell true,
+              :is-show-brick false,
+              :is-show-loc false,
+              :is-show-project false,
+              :is-show-resources false,
+              :is-show-workspace false,
+              :is-tap false,
+              :is-verbose false,
+              :selected-profiles #{},
+              :selected-projects #{},
+              :unnamed-args [],
+              :ws-dir nil,
+              :ws-file nil},
+ :version {:release {:date "2021-10-12",
+                     :major 0,
+                     :minor 2,
+                     :name "0.2.13-alpha",
+                     :patch 13,
+                     :revision "alpha"},
+           :ws {:breaking 1, :non-breaking 0, :type :toolsdeps2}},
+ :ws-dir "/Users/vishalgautam/projects/polylith_js/conduit",
+ :ws-reader {:file-extensions ["clj" "cljc"],
+             :language "Clojure",
+             :name "polylith-clj",
+             :project-url "https://github.com/polyfy/polylith",
+             :type-position "postfix"}}

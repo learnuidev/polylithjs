@@ -1,4 +1,4 @@
-const restApi = require('./bases/rest_api/src/www/conduit/rest_api')
+const restApi = require('../../bases/rest_api/src/www/conduit/rest_api')
 
 const keyMap = {
     "-p": 'port',

@@ -5,16 +5,13 @@ const database = require('../../../../../database/src/www/conduit/database/inter
 let db;
 
 const browseArticles = async () => {
-    if (!db) {
-        console.log("GETS CALLED")
-        db = database.db()
-    }
-
+    // if (!db) {
     console.log("GETS CALLED")
-
+    db = database.db()
+    // }
 
     // console.log("DB", db);
-    return await db`select * from mySchema.users`
+    // return await db`select * from mySchema.users`
     // return [
 
     //     {

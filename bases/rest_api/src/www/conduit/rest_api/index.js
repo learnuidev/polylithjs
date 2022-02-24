@@ -7,23 +7,28 @@ const bodyParser = require('body-parser')
 
 const start = (props) => {
     const app = express()
+
     // Middlewares
-    // app.use(express.urlencoded())
     app.use(bodyParser.json());
 
-    // respond with "hello world" when a GET request is made to the homepage
+    // Routes
     routes.routes({ app })
 
-    // constants
-    const PORT = props.port || 3000;
+    // Constants
+    const PORT = props?.port || 3000
 
     app.listen(PORT, () => {
         console.log(`Example app listening on port ${PORT}`)
     })
-
-    return app
 }
 
+
+const stop = () => {
+    process.exit(0)
+}
+
+
 exports.start = start;
+exports.stop = stop;
 
 

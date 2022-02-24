@@ -10,7 +10,8 @@
     "postgres": "^1.0.2"
   },
   "scripts": {
-    "dev": "node_modules/nodemon/bin/nodemon.js index.js"
+    "dev": "node_modules/nodemon/bin/nodemon.js development/src/index.js",
+    "server": "node projects/api-service/index.js"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"

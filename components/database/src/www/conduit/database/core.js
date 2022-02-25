@@ -1,4 +1,5 @@
 const postgres = require('postgres');
+const eventLog = require('../../../../../event-log/src/www/conduit/event_log/interface')
 const schema = require('./schema').schema
 
 const createConduit = async (sql) => {
@@ -11,7 +12,7 @@ const dropTable = async (sql, { name }) => {
     await sql`DROP table ${name} `
 }
 
-const db = (config) => {
+const db = async (config) => {
     const sql = postgres(`postgres://username@host:port/database`, {
         username: 'vishalgautam',
         host: 'localhost',
@@ -21,7 +22,15 @@ const db = (config) => {
 
     console.log("gets called")
 
-    createConduit(sql)
+    if (config?.createConduit) {
+        await createConduit(sql)
+    }
+
+    if (config?.createEventLog) {
+        await eventLog.createEventLog(sql)
+    }
+
+    await eventLog.dropEventLog(sql)
 
     return sql;
 }

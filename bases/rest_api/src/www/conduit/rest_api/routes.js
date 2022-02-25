@@ -7,7 +7,6 @@ const routes = ({ app }) => {
     })
 
     app.get('/api/articles', handlers.browseArticles)
-
     app.post('/api/register', handlers.registerUser)
     app.post('/api/login', handlers.loginUser)
 }
